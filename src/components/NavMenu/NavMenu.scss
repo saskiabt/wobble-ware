@@ -1,0 +1,41 @@
+.NavMenu {
+  display: flex;
+  height: 30vh;
+  flex-direction: column;
+
+  .btn {
+    background-color: white;
+    flex: 1 1 auto;
+    font-size: 3em;
+    font-family: "Basteleur-Moonlight", sans-serif;
+    border: 0px;
+    border-bottom: 1px solid black;
+    transition: ease 0.6s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  .NavButton {
+    height: 6vh;
+    font-size: 1.5em;
+    justify-content: flex-end;
+    text-align: end;
+    border-bottom: 0px;
+    padding-right: 30px;
+    transition: ease 0.2s;
+    background-color: white;
+    cursor: pointer;
+
+    &:hover {
+      color: grey;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+}

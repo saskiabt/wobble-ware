@@ -1,0 +1,79 @@
+.LandingPage {
+  background-color: black;
+  padding: 30px 4vw;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  align-content: space-between;
+  box-sizing: border-box;
+  padding-bottom: 15px;
+
+  img {
+    height: 70vmin;
+    max-height: 650px;
+    width: auto;
+    object-fit: contain;
+    animation: spinner 4s linear infinite;
+    perspective: 300px;
+    transform-style: preserve-3d;
+    transition: ease-in-out;
+    grid-column: 2/2;
+    grid-row: 2/2;
+  }
+
+  h1 {
+    font-family: "Basteleur-Moonlight";
+    font-size: 7em;
+  }
+
+  .top {
+    grid-row: 1/1;
+    grid-column: 1/4;
+    justify-self: start;
+    align-self: start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 1;
+    width: 100%;
+    gap: 10px;
+  }
+
+  :nth-child(3) {
+    grid-row: 3/3;
+    grid-column: 1/4;
+    justify-self: end;
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 11;
+    position: relative;
+    top: -30px;
+  }
+
+  button {
+    display: flex;
+    align-items: flex-start;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 2em;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+@keyframes spinner {
+  from {
+    transform: rotateY(-45deg);
+  }
+  to {
+    transform: rotateY(-225deg);
+  }
+}
