@@ -12,14 +12,25 @@
   position: -webkit-sticky;
   position: sticky;
 }
-.NavMenu button {
+.NavMenu button,
+.NavMenu a {
   width: 100%;
-  font-size: 1.6em;
+  font-size: 1.5em;
   font-family: "Basteleur-Moonlight", sans-serif;
   background-color: white;
   border: 0;
-  border-bottom: 1px solid black;
   padding: 10% 10px;
+  cursor: pointer;
+}
+.NavMenu button:hover,
+.NavMenu a:hover {
+  background-color: rgba(249, 208, 130, 0.631372549);
+}
+.NavMenu a {
+  padding: 0;
+}
+.NavMenu .NavButton:hover {
+  transform: skewX(0deg);
 }
 
 .menu-active {

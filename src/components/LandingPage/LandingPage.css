@@ -9,11 +9,11 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 30px 3em;
+  padding: 30px 4vw;
 }
 .LandingPage .left .vessel {
   height: 70vmin;
-  max-height: 650px;
+  max-height: 660px;
   width: auto;
   -o-object-fit: contain;
      object-fit: contain;

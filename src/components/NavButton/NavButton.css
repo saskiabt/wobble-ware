@@ -1,3 +1,7 @@
 .NavButton {
   cursor: pointer;
-} /*# sourceMappingURL=NavButton.css.map */
+  transition: ease 0.2s;
+}
+.NavButton:hover {
+  transform: skewX(-5deg);
+}/*# sourceMappingURL=NavButton.css.map */

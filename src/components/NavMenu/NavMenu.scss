@@ -9,14 +9,31 @@
   background-color: white;
   position: sticky;
 
-  button {
+  button,
+  a {
     width: 100%;
-    font-size: 1.6em;
+    font-size: 1.5em;
     font-family: "Basteleur-Moonlight", sans-serif;
     background-color: white;
     border: 0;
-    border-bottom: 1px solid black;
+    // border-bottom: 1px solid black;
     padding: 10% 10px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f9d082a1;
+      // color: white;
+    }
+  }
+
+  a {
+    padding: 0;
+  }
+
+  .NavButton {
+    &:hover {
+      transform: skewX(0deg);
+    }
   }
 }
 
@@ -27,6 +44,7 @@
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
+
 @keyframes sliderIn {
   from {
     opacity: 0;
