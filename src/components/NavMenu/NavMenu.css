@@ -1,36 +1,58 @@
 .NavMenu {
   display: flex;
-  height: 30vh;
   flex-direction: column;
-}
-.NavMenu .btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: flex-end;
+  opacity: 0;
+  transform: translateX(100%);
+  height: 100%;
   background-color: white;
-  flex: 1 1 auto;
-  font-size: 3em;
+  position: -webkit-sticky;
+  position: sticky;
+}
+.NavMenu button {
+  width: 100%;
+  font-size: 1.6em;
   font-family: "Basteleur-Moonlight", sans-serif;
-  border: 0px;
-  border-bottom: 1px solid black;
-  transition: ease 0.6s;
-  cursor: pointer;
-}
-.NavMenu .btn:hover {
-  background-color: black;
-  color: white;
-}
-.NavMenu .NavButton {
-  height: 6vh;
-  font-size: 1.5em;
-  justify-content: flex-end;
-  text-align: end;
-  border-bottom: 0px;
-  padding-right: 30px;
-  transition: ease 0.2s;
   background-color: white;
-  cursor: pointer;
+  border: 0;
+  border-bottom: 1px solid black;
+  padding: 10% 10px;
 }
-.NavMenu .NavButton:hover {
-  color: grey;
+
+.menu-active {
+  -webkit-animation-name: sliderIn;
+          animation-name: sliderIn;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
-.NavMenu .hidden {
-  display: none;
+
+@-webkit-keyframes sliderIn {
+  from {
+    opacity: 0;
+    transform: translateX(1000%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes sliderIn {
+  from {
+    opacity: 0;
+    transform: translateX(1000%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }/*# sourceMappingURL=NavMenu.css.map */

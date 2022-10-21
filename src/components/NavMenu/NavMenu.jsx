@@ -1,15 +1,14 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../../context/GlobalState";
-
-import "./NavMenu.css";
 import NavButton from "../NavButton/NavButton";
+import "./NavMenu.css";
 
 function NavMenu() {
   const { isBars } = useContext(GlobalContext);
 
   return (
-    <div className={isBars ? "hidden" : "NavMenu"}>
-      <NavButton className="btn" />
+    <div className={`NavMenu ${isBars ? "null" : "menu-active"}`}>
+      {!isBars && <NavButton />}
       <button type="button" className="btn">
         Home
       </button>

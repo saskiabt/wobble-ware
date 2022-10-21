@@ -7,11 +7,11 @@ import { GlobalContext } from "../../context/GlobalState";
 function NavButton() {
   const { isBars, toggleIsBars } = useContext(GlobalContext);
 
-  const handleClick = () => {
+  const toggleNav = () => {
     toggleIsBars();
   };
   return (
-    <button type="button" className="NavButton" onClick={handleClick}>
+    <button type="button" className="NavButton" onClick={toggleNav}>
       {isBars ? (
         <FontAwesomeIcon icon={faBars} />
       ) : (

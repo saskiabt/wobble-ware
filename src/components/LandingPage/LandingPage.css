@@ -1,17 +1,17 @@
 .LandingPage {
   background-color: black;
-  padding: 30px 4vw;
   height: 100vh;
   width: 100%;
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: space-between;
-  align-content: space-between;
-  box-sizing: border-box;
-  padding-bottom: 15px;
+  display: flex;
+  transition: ease-in-out 1s;
 }
-.LandingPage img {
+.LandingPage .left {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 30px 3em;
+}
+.LandingPage .left .vessel {
   height: 70vmin;
   max-height: 650px;
   width: auto;
@@ -25,23 +25,23 @@
   grid-column: 2/2;
   grid-row: 2/2;
 }
-.LandingPage h1 {
+.LandingPage .left h1 {
   font-family: "Basteleur-Moonlight";
   font-size: 7em;
 }
-.LandingPage .top {
+.LandingPage .left .top {
   grid-row: 1/1;
   grid-column: 1/4;
   justify-self: start;
   align-self: start;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   z-index: 1;
   width: 100%;
   gap: 10px;
+  justify-content: space-between;
 }
-.LandingPage :nth-child(3) {
+.LandingPage .left :nth-child(3) {
   grid-row: 3/3;
   grid-column: 1/4;
   justify-self: end;
@@ -53,7 +53,7 @@
   position: relative;
   top: -30px;
 }
-.LandingPage button {
+.LandingPage .left button {
   display: flex;
   align-items: flex-start;
   background: none;
@@ -61,7 +61,7 @@
   border: none;
   font-size: 2em;
 }
-.LandingPage .hidden {
+.LandingPage .left .hidden {
   display: none;
 }
 

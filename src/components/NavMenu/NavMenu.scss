@@ -1,41 +1,39 @@
 .NavMenu {
   display: flex;
-  height: 30vh;
   flex-direction: column;
+  width: fit-content;
+  align-items: flex-end;
+  opacity: 0;
+  transform: translateX(100%);
+  height: 100%;
+  background-color: white;
+  position: sticky;
 
-  .btn {
-    background-color: white;
-    flex: 1 1 auto;
-    font-size: 3em;
+  button {
+    width: 100%;
+    font-size: 1.6em;
     font-family: "Basteleur-Moonlight", sans-serif;
-    border: 0px;
-    border-bottom: 1px solid black;
-    transition: ease 0.6s;
-    cursor: pointer;
-
-    &:hover {
-      background-color: black;
-      color: white;
-    }
-  }
-
-  .NavButton {
-    height: 6vh;
-    font-size: 1.5em;
-    justify-content: flex-end;
-    text-align: end;
-    border-bottom: 0px;
-    padding-right: 30px;
-    transition: ease 0.2s;
     background-color: white;
-    cursor: pointer;
-
-    &:hover {
-      color: grey;
-    }
+    border: 0;
+    border-bottom: 1px solid black;
+    padding: 10% 10px;
   }
+}
 
-  .hidden {
-    display: none;
+.menu-active {
+  animation-name: sliderIn;
+  animation-duration: 0.4s;
+  animation-delay: 0s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes sliderIn {
+  from {
+    opacity: 0;
+    transform: translateX(1000%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
   }
 }
