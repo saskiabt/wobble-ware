@@ -3,5 +3,10 @@
   transition: ease 0.2s;
 }
 .NavButton:hover {
-  transform: skewX(-5deg);
+  transform: skewX(-2deg);
+}
+
+.icon_pulse {
+  -webkit-animation: circle 1.2s steps(8) infinite;
+          animation: circle 1.2s steps(8) infinite;
 }/*# sourceMappingURL=NavButton.css.map */
